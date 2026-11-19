@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sandra Silva Duarte · Epidemióloga</title>
+<meta name="description" content="Portafolio de servicios técnicos de Sandra Patricia Silva Duarte, epidemióloga de campo: gestión del riesgo, respuesta a brotes, análisis de riesgo y fortalecimiento de capacidades en salud pública.">
+<meta property="og:title" content="Sandra Silva Duarte · Epidemióloga de campo">
+<meta property="og:description" content="Gestión del riesgo, respuesta a brotes y fortalecimiento de capacidades en salud pública.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== Paleta Silva-Duarte ===== */
+:root{
+  --ink:#140705;        /* fondo oscuro */
+  --paper:#F2EEED;      /* fondo claro */
+  --rosa:#E5A4D9;       /* letras / acento 1 */
+  --turq:#00CED1;       /* letras / acento 2 */
+  --ink-2:#1f0e0b;
+  --ink-3:#2b1712;
+  --muted:#c9bdbb;
+  --muted-dark:#5b4a47;
+  --line:rgba(229,164,217,.18);
+  --radius:22px;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:Manrope,system-ui,sans-serif;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+[hidden]{display:none!important}
+img{max-width:100%}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+@media (max-width:600px){.wrap{padding:0 16px}}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-.01em}
+.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--turq);font-weight:700;display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor;border-radius:2px}
+.grad{background:linear-gradient(100deg,var(--rosa) 10%,var(--turq) 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+::selection{background:var(--rosa);color:var(--ink)}
+
+/* ===== Progreso + nav ===== */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:60;background:linear-gradient(90deg,var(--rosa),var(--turq))}
+nav.top{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.top.scrolled{background:rgba(20,7,5,.78);backdrop-filter:blur(14px);border-color:var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:Fraunces,serif;font-size:1.25rem;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo b{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--rosa),var(--turq));color:var(--ink);font-size:.95rem;font-family:Manrope;font-weight:800}
+.links{display:flex;gap:26px;list-style:none}
+.links a{text-decoration:none;font-size:.9rem;color:var(--muted);transition:color .2s;position:relative}
+.links a:hover,.links a.active{color:var(--paper)}
+.links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--turq);border-radius:2px}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--paper);border-radius:10px;padding:8px 12px;font:inherit;cursor:pointer}
+@media (max-width:860px){
+  .links{position:fixed;inset:70px 0 auto 0;flex-direction:column;gap:0;background:rgba(20,7,5,.97);border-bottom:1px solid var(--line);padding:8px 0;transform:translateY(-130%);transition:transform .35s}
+  .links.open{transform:none}
+  .links a{display:block;padding:14px 24px}
+  .menu-btn{display:block}
+}
+
+/* ===== Hero ===== */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:110px 0 70px;overflow:hidden}
+#net{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 75% 40%,transparent 0,rgba(20,7,5,.35) 45%,var(--ink) 85%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero h1{font-size:clamp(2.8rem,7.4vw,6.2rem);margin:22px 0 18px;font-weight:300}
+.hero h1 strong{font-weight:600;display:block}
+.role{font-size:clamp(1.1rem,2.3vw,1.5rem);color:var(--rosa);min-height:2.2em;font-family:Fraunces,serif;font-style:italic}
+.role .cursor{display:inline-block;width:2px;height:1.05em;background:var(--turq);vertical-align:-3px;margin-left:3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p.lead{max-width:600px;color:var(--muted);font-size:1.08rem;margin:18px 0 34px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;font-size:.95rem;transition:transform .25s,box-shadow .25s,background .25s;border:1px solid transparent}
+.btn.primary{background:linear-gradient(110deg,var(--rosa),var(--turq));color:var(--ink)}
+.btn.primary:hover{transform:translateY(-3px);box-shadow:0 14px 34px -10px rgba(0,206,209,.55)}
+.btn.ghost{border-color:var(--line);color:var(--paper)}
+.btn.ghost:hover{border-color:var(--turq);color:var(--turq)}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:46px}
+.badge{border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:.82rem;color:var(--muted);background:rgba(31,14,11,.6);backdrop-filter:blur(6px)}
+.badge i{font-style:normal;color:var(--turq);margin-right:6px}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;width:26px;height:42px;border:2px solid var(--line);border-radius:14px}
+.scroll-hint::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--turq);animation:wheel 1.8s infinite}
+@keyframes wheel{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
+
+/* ===== Secciones ===== */
+section{padding:120px 0;position:relative}
+@media (max-width:600px){section{padding:84px 0}}
+.sec-head{max-width:720px;margin-bottom:58px}
+.sec-head h2{font-size:clamp(2rem,4.6vw,3.4rem);margin-top:16px}
+.sec-head p{color:var(--muted);margin-top:16px;font-size:1.05rem}
+.light{background:var(--paper);color:var(--ink)}
+.light .sec-head p{color:var(--muted-dark)}
+.light .eyebrow{color:#008f92}
+
+/* ===== Cifras ===== */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:-70px;position:relative;z-index:3}
+@media (max-width:860px){.stats{grid-template-columns:repeat(2,1fr);margin-top:0}}
+.stat{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;transition:transform .3s,border-color .3s}
+.stat:hover{transform:translateY(-6px);border-color:var(--turq)}
+.stat .n{font-family:Fraunces,serif;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1;color:var(--turq)}
+.stat:nth-child(even) .n{color:var(--rosa)}
+.stat .l{color:var(--muted);font-size:.9rem;margin-top:10px}
+
+/* ===== Sobre mí ===== */
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+@media (max-width:860px){.about{grid-template-columns:1fr;gap:40px}}
+.about p{font-size:1.08rem;color:var(--muted-dark);margin-bottom:18px}
+.about p strong{color:var(--ink)}
+.quote{font-family:Fraunces,serif;font-style:italic;font-size:1.5rem;line-height:1.35;color:var(--ink);border-left:4px solid var(--turq);padding-left:22px;margin:30px 0}
+.portrait{position:relative;aspect-ratio:1/1;border-radius:32px;background:var(--ink);overflow:hidden;display:grid;place-items:center}
+.portrait svg{width:86%;height:86%}
+.portrait .tag{position:absolute;bottom:18px;left:18px;right:18px;background:rgba(242,238,237,.08);border:1px solid var(--line);backdrop-filter:blur(8px);border-radius:16px;padding:14px 18px;color:var(--paper);font-size:.88rem}
+.portrait .tag b{color:var(--turq)}
+
+/* ===== Skills ===== */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:960px){.skills{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.skills{grid-template-columns:1fr}}
+.skill{position:relative;background:var(--ink-2);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;overflow:hidden;transition:transform .35s,border-color .35s}
+.skill::before{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0%),rgba(0,206,209,.14),transparent 45%);opacity:0;transition:opacity .3s}
+.skill:hover{transform:translateY(-6px);border-color:rgba(0,206,209,.5)}
+.skill:hover::before{opacity:1}
+.skill .ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:rgba(229,164,217,.12);margin-bottom:20px}
+.skill:nth-child(even) .ico{background:rgba(0,206,209,.12)}
+.skill .ico svg{width:26px;height:26px;stroke:var(--rosa);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.skill:nth-child(even) .ico svg{stroke:var(--turq)}
+.skill h3{font-size:1.3rem;margin-bottom:10px;color:var(--paper)}
+.skill p{color:var(--muted);font-size:.95rem}
+.meter{height:6px;background:rgba(242,238,237,.08);border-radius:6px;margin-top:22px;overflow:hidden}
+.meter span{display:block;height:100%;width:0;border-radius:6px;background:linear-gradient(90deg,var(--rosa),var(--turq));transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chips span{font-size:.74rem;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--rosa)}
+
+/* ===== Servicios ===== */
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media (max-width:760px){.services{grid-template-columns:1fr}}
+.svc{background:#fff;border-radius:var(--radius);padding:34px 32px;border:1px solid rgba(20,7,5,.08);display:grid;grid-template-columns:auto 1fr;gap:22px;transition:transform .35s,box-shadow .35s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 26px 50px -24px rgba(20,7,5,.35)}
+.svc .num{font-family:Fraunces,serif;font-size:2.4rem;line-height:1;background:linear-gradient(160deg,#c45db3,#00a9ac);-webkit-background-clip:text;background-clip:text;color:transparent}
+.svc h3{font-size:1.32rem;margin-bottom:8px}
+.svc p{color:var(--muted-dark);font-size:.96rem}
+.svc ul{list-style:none;margin-top:14px;display:grid;gap:6px}
+.svc li{font-size:.9rem;color:var(--ink);padding-left:22px;position:relative}
+.svc li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;border-radius:50%;border:2px solid #00a9ac}
+
+/* ===== Trayectoria ===== */
+.timeline{position:relative;max-width:900px;margin:0 auto}
+.timeline::before{content:"";position:absolute;left:20px;top:0;bottom:0;width:2px;background:var(--line)}
+.timeline .fill{position:absolute;left:20px;top:0;width:2px;height:0;background:linear-gradient(var(--rosa),var(--turq));transition:height .15s linear}
+.item{position:relative;padding:0 0 46px 66px}
+.item .dot{position:absolute;left:11px;top:6px;width:20px;height:20px;border-radius:50%;background:var(--ink);border:3px solid var(--rosa);transition:background .4s,border-color .4s,box-shadow .4s}
+.item.lit .dot{background:var(--turq);border-color:var(--turq);box-shadow:0 0 0 8px rgba(0,206,209,.15)}
+.item .when{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--turq);font-weight:700}
+.item h3{font-size:1.4rem;margin:6px 0 4px}
+.item .org{color:var(--rosa);font-weight:600;font-size:.95rem}
+.item p{color:var(--muted);margin-top:8px;font-size:.95rem}
+
+/* ===== Formación ===== */
+.edu{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:860px){.edu{grid-template-columns:1fr}}
+.card-edu{border-radius:var(--radius);padding:32px 28px;background:var(--ink);color:var(--paper);position:relative;overflow:hidden;min-height:230px;display:flex;flex-direction:column;justify-content:flex-end}
+.card-edu .yr{position:absolute;top:18px;right:22px;font-family:Fraunces,serif;font-size:3.6rem;line-height:1;color:rgba(229,164,217,.16)}
+.card-edu .lvl{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--turq);font-weight:700}
+.card-edu h3{font-size:1.45rem;margin:10px 0 8px}
+.card-edu p{color:var(--muted);font-size:.92rem}
+.certs{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px}
+.certs span{background:#fff;border:1px solid rgba(20,7,5,.08);border-radius:999px;padding:9px 16px;font-size:.86rem}
+.certs span b{color:#00a9ac}
+
+/* ===== Logros ===== */
+.wins{display:grid;grid-template-columns:1.25fr 1fr;gap:22px}
+@media (max-width:900px){.wins{grid-template-columns:1fr}}
+.feature{background:linear-gradient(150deg,var(--ink-3),var(--ink-2));border:1px solid var(--line);border-radius:28px;padding:40px 36px}
+.feature .pill{display:inline-block;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink);background:var(--turq);border-radius:999px;padding:6px 12px}
+.feature h3{font-size:clamp(1.5rem,2.6vw,2rem);margin:18px 0 12px}
+.feature p{color:var(--muted)}
+.bars{margin-top:28px;display:grid;gap:16px}
+.bar-row{display:grid;grid-template-columns:120px 1fr 60px;align-items:center;gap:14px;font-size:.88rem}
+@media (max-width:500px){.bar-row{grid-template-columns:90px 1fr 50px}}
+.bar-row .track{height:12px;border-radius:12px;background:rgba(242,238,237,.07);overflow:hidden}
+.bar-row .track span{display:block;height:100%;width:0;border-radius:12px;background:linear-gradient(90deg,var(--rosa),var(--turq));transition:width 1.8s cubic-bezier(.2,.8,.2,1)}
+.bar-row b{color:var(--turq);text-align:right}
+.mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.mini-stats div{border:1px solid var(--line);border-radius:16px;padding:14px;text-align:center}
+.mini-stats b{display:block;font-family:Fraunces,serif;font-size:1.6rem;color:var(--rosa)}
+.mini-stats small{color:var(--muted);font-size:.78rem}
+.win-list{display:grid;gap:18px}
+.win{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--radius);padding:26px 26px;display:flex;gap:18px;align-items:flex-start;transition:border-color .3s,transform .3s}
+.win:hover{border-color:var(--rosa);transform:translateX(6px)}
+.win .medal{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--rosa),var(--turq));color:var(--ink);font-weight:800}
+.win h4{font-family:Fraunces,serif;font-size:1.15rem;font-weight:600;margin-bottom:4px}
+.win p{color:var(--muted);font-size:.9rem}
+
+/* ===== Eventos (marquee) ===== */
+.marquee{overflow:hidden;border-block:1px solid var(--line);padding:22px 0;background:var(--ink-2)}
+.marquee .track{display:flex;gap:46px;width:max-content;animation:slide 40s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.marquee span{font-family:Fraunces,serif;font-size:1.5rem;white-space:nowrap;color:var(--paper)}
+.marquee span em{font-style:normal;color:var(--turq);margin-right:46px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ===== Contacto ===== */
+.contact{text-align:center;padding:140px 0}
+.contact h2{font-size:clamp(2.4rem,6vw,4.6rem);max-width:900px;margin:18px auto 22px}
+.contact p{color:var(--muted);max-width:560px;margin:0 auto 38px}
+.contact .cta{justify-content:center}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* ===== Animación de aparición ===== */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<nav class="top" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#inicio"><b>SS</b>Silva-Duarte</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">Menú</button>
+    <ul class="links" id="links">
+      <li><a href="#sobre">Sobre mí</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#trayectoria">Trayectoria</a></li>
+      <li><a href="#logros">Logros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="inicio">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <span class="eyebrow reveal">Portafolio de servicios técnicos</span>
+    <h1 class="reveal d1">Sandra Patricia<strong class="grad">Silva Duarte</strong></h1>
+    <div class="role reveal d2"><span id="typed"></span><span class="cursor"></span></div>
+    <p class="lead reveal d3">Epidemióloga con más de 15 años en vigilancia en salud pública en Colombia. Detecto brotes, analizo el riesgo y acompaño a los territorios para que respondan a tiempo.</p>
+    <div class="cta reveal d4">
+      <a class="btn primary" href="#servicios">Ver servicios →</a>
+      <a class="btn ghost" href="#contacto">Trabajemos juntos</a>
+    </div>
+    <div class="badges reveal d5">
+      <span class="badge"><i>●</i>FETP Avanzado · INS</span>
+      <span class="badge"><i>●</i>Docente INS 2025</span>
+      <span class="badge"><i>●</i>RSI 2005</span>
+      <span class="badge"><i>●</i>Equipos de Respuesta Inmediata</span>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"></div>
+</header>
+
+<!-- ===================== CIFRAS ===================== -->
+<div class="wrap">
+  <div class="stats">
+    <div class="stat reveal"><div class="n" data-count="15" data-suffix="+">0</div><div class="l">años en salud pública</div></div>
+    <div class="stat reveal d1"><div class="n" data-count="8">0</div><div class="l">instituciones: INS, OPS, Subredes y hospitales de Bogotá</div></div>
+    <div class="stat reveal d2"><div class="n" data-count="38">0</div><div class="l">entidades territoriales evaluadas en capacidades básicas</div></div>
+    <div class="stat reveal d3"><div class="n" data-count="65">0</div><div class="l">variables de preparación y respuesta analizadas</div></div>
+  </div>
+</div>
+
+<!-- ===================== SOBRE MÍ ===================== -->
+<section id="sobre" class="light" style="margin-top:110px">
+  <div class="wrap about">
+    <div>
+      <span class="eyebrow reveal">Sobre mí</span>
+      <h2 class="reveal d1" style="font-size:clamp(2rem,4.4vw,3.2rem);margin:16px 0 24px">Primero llego al territorio y después reviso los datos.</h2>
+      <p class="reveal d2">Soy <strong>odontóloga y especialista en Epidemiología</strong>. Desde 2011 trabajo en la <strong>vigilancia en salud pública</strong>. Pasé más de una década en hospitales y Subredes de Bogotá, donde llegué a liderar equipos operativos y líneas de salud ambiental. Después pasé a la escala nacional en el <strong>Grupo de Gestión del Riesgo y Respuesta Inmediata del Instituto Nacional de Salud</strong> y como apoyo técnico de la <strong>Organización Panamericana de la Salud</strong>.</p>
+      <p class="reveal d3">Hoy hago el <strong>programa FETP de Epidemiología de Campo, nivel avanzado</strong>. Participo en Equipos de Respuesta Inmediata, salas de análisis de riesgo y la evaluación de capacidades básicas del Reglamento Sanitario Internacional en todo el país.</p>
+      <div class="quote reveal d4">“Una alerta oportuna, bien analizada y comunicada con claridad salva vidas.”</div>
+    </div>
+    <div class="portrait reveal d2">
+      <!-- Ilustración: mapa-red de territorios -->
+      <svg viewBox="0 0 400 400" aria-hidden="true">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E5A4D9"/><stop offset="1" stop-color="#00CED1"/></linearGradient>
+        </defs>
+        <circle cx="200" cy="200" r="170" fill="none" stroke="url(#g1)" stroke-opacity=".25" stroke-dasharray="4 8">
+          <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="60s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="200" cy="200" r="120" fill="none" stroke="#00CED1" stroke-opacity=".18"/>
+        <circle cx="200" cy="200" r="60" fill="none" stroke="#E5A4D9" stroke-opacity=".3"/>
+        <g stroke="url(#g1)" stroke-width="1.4" stroke-opacity=".7">
+          <line x1="200" y1="200" x2="120" y2="110"/><line x1="200" y1="200" x2="300" y2="130"/>
+          <line x1="200" y1="200" x2="290" y2="290"/><line x1="200" y1="200" x2="105" y2="275"/>
+          <line x1="120" y1="110" x2="300" y2="130"/><line x1="105" y1="275" x2="290" y2="290"/>
+          <line x1="200" y1="200" x2="200" y2="60"/><line x1="200" y1="200" x2="340" y2="215"/><line x1="200" y1="200" x2="60" y2="190"/>
+        </g>
+        <g fill="#E5A4D9"><circle cx="120" cy="110" r="7"/><circle cx="290" cy="290" r="7"/><circle cx="60" cy="190" r="5"/></g>
+        <g fill="#00CED1"><circle cx="300" cy="130" r="7"/><circle cx="105" cy="275" r="7"/><circle cx="200" cy="60" r="5"/><circle cx="340" cy="215" r="5"/></g>
+        <circle cx="200" cy="200" r="16" fill="url(#g1)"/>
+        <circle cx="200" cy="200" r="16" fill="none" stroke="#00CED1" stroke-width="2">
+          <animate attributeName="r" values="16;60" dur="2.6s" repeatCount="indefinite"/>
+          <animate attributeName="stroke-opacity" values=".9;0" dur="2.6s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+      <div class="tag"><b>Ciencia · Territorio · Respuesta</b><br>De la notificación del caso a la decisión en salud pública.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow reveal">Mayores fortalezas</span>
+      <h2 class="reveal d1">Lo que <span class="grad">sé hacer</span> y hago bien</h2>
+      <p class="reveal d2">Combino la experiencia de campo con el análisis cuantitativo y la formación de equipos.</p>
+    </div>
+    <div class="skills">
+      <article class="skill reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></div>
+        <h3>Investigación de brotes</h3>
+        <p>Despliegue en Equipos de Respuesta Inmediata (ERI): fiebre amarilla, sarampión, tosferina, varicela, malaria y parotiditis.</p>
+        <div class="chips"><span>ERI</span><span>Trabajo de campo</span><span>Cerco epidemiológico</span></div>
+        <div class="meter"><span data-w="96"></span></div>
+      </article>
+      <article class="skill reveal d1">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg></div>
+        <h3>Valoración y análisis del riesgo</h3>
+        <p>Coordino Salas de Análisis de Riesgo (SAR) y caracterizo eventos de interés en salud pública para tomar decisiones a tiempo.</p>
+        <div class="chips"><span>SAR</span><span>Gestión del riesgo</span><span>7-1-7</span></div>
+        <div class="meter"><span data-w="95"></span></div>
+      </article>
+      <article class="skill reveal d2">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+        <h3>Capacidades básicas RSI 2005</h3>
+        <p>Evalúo la preparación, la identificación, el análisis y la respuesta de departamentos y distritos con el Modelo de Preparación y Respuesta en Salud Pública (MPRPSP).</p>
+        <div class="chips"><span>RSI</span><span>MPRPSP</span><span>Asistencia técnica</span></div>
+        <div class="meter"><span data-w="93"></span></div>
+      </article>
+      <article class="skill reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
+        <h3>Vigilancia en salud pública</h3>
+        <p>Notificación, protocolos y fichas del INS, COVE, boletines epidemiológicos y gestoría por semana epidemiológica.</p>
+        <div class="chips"><span>SIVIGILA</span><span>COVE</span><span>BES</span></div>
+        <div class="meter"><span data-w="97"></span></div>
+      </article>
+      <article class="skill reveal d1">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="12" cy="10" r="2"/><circle cx="18" cy="5" r="2"/><path d="M7.4 16.6l3.2-5.2M13.6 8.8l3-2.6"/></svg></div>
+        <h3>Bioestadística y análisis de datos</h3>
+        <p>Estudios longitudinales, intervalos de confianza, tamaños de efecto, índice de Gini, concordancia kappa y tableros interactivos.</p>
+        <div class="chips"><span>Excel</span><span>Estadística</span><span>IA aplicada</span></div>
+        <div class="meter"><span data-w="88"></span></div>
+      </article>
+      <article class="skill reveal d2">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></div>
+        <h3>Emergencias y SIG</h3>
+        <p>Apoyo a Centros de Operaciones de Emergencia (COE), respuesta a desastres como el sismo de 2026 y mapas de riesgo en QGIS.</p>
+        <div class="chips"><span>COE</span><span>QGIS</span><span>Simulacros</span></div>
+        <div class="meter"><span data-w="86"></span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MARQUEE ===================== -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span><em>✦</em>Fiebre amarilla</span><span><em>✦</em>Sarampión</span><span><em>✦</em>Tosferina</span><span><em>✦</em>Malaria</span><span><em>✦</em>Sismo Colombia 2026</span><span><em>✦</em>Varicela</span><span><em>✦</em>Parotiditis</span><span><em>✦</em>Metodología 7-1-7</span>
+    <span><em>✦</em>Fiebre amarilla</span><span><em>✦</em>Sarampión</span><span><em>✦</em>Tosferina</span><span><em>✦</em>Malaria</span><span><em>✦</em>Sismo Colombia 2026</span><span><em>✦</em>Varicela</span><span><em>✦</em>Parotiditis</span><span><em>✦</em>Metodología 7-1-7</span>
+  </div>
+</div>
+
+<!-- ===================== SERVICIOS ===================== -->
+<section id="servicios" class="light">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow reveal">Portafolio de servicios</span>
+      <h2 class="reveal d1">¿Cómo puedo <span style="color:#c45db3">ayudar</span> a tu equipo?</h2>
+      <p class="reveal d2">Ofrezco servicios técnicos para secretarías de salud, entidades territoriales, IPS, organismos de cooperación y la academia.</p>
+    </div>
+    <div class="services">
+      <article class="svc reveal">
+        <div class="num">01</div>
+        <div><h3>Respuesta a brotes y emergencias</h3>
+          <p>Investigación de campo de principio a fin.</p>
+          <ul><li>Investigación epidemiológica de campo</li><li>Búsqueda activa y cerco epidemiológico</li><li>Informes técnicos de brote</li></ul></div>
+      </article>
+      <article class="svc reveal d1">
+        <div class="num">02</div>
+        <div><h3>Salas de análisis de riesgo</h3>
+          <p>Paso de los datos a decisiones con un método estructurado.</p>
+          <ul><li>Valoración y caracterización del riesgo</li><li>Recomendaciones y seguimiento</li><li>Indicadores de oportunidad 7-1-7</li></ul></div>
+      </article>
+      <article class="svc reveal d2">
+        <div class="num">03</div>
+        <div><h3>Evaluación de capacidades básicas</h3>
+          <p>Diagnóstico de la preparación y respuesta territorial según el RSI 2005.</p>
+          <ul><li>Autoevaluación y verificación documental</li><li>Planes de mejora priorizados</li><li>Asistencia técnica y fortalecimiento</li></ul></div>
+      </article>
+      <article class="svc reveal d3">
+        <div class="num">04</div>
+        <div><h3>Análisis de datos y comunicación del riesgo</h3>
+          <p>Datos claros para quien toma decisiones.</p>
+          <ul><li>Boletines y reportes epidemiológicos</li><li>Tableros y mapas de riesgo (QGIS)</li><li>Análisis estadístico de estudios</li></ul></div>
+      </article>
+      <article class="svc reveal">
+        <div class="num">05</div>
+        <div><h3>Formación y tutoría</h3>
+          <p>Fortalecimiento del talento humano en vigilancia.</p>
+          <ul><li>Talleres de valoración del riesgo</li><li>Tutoría certificada por el INS</li><li>Simulaciones y simulacros</li></ul></div>
+      </article>
+      <article class="svc reveal d1">
+        <div class="num">06</div>
+        <div><h3>Salud ambiental y vigilancia local</h3>
+          <p>Gestión de riesgos ambientales y de eventos en el territorio.</p>
+          <ul><li>Aire, ruido, radiación electromagnética y cambio climático</li><li>Unidades de análisis, COVE y calidad del dato en SIVIGILA</li><li>Liderazgo, inducción y evaluación de equipos operativos</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRAYECTORIA ===================== -->
+<section id="trayectoria">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow reveal">Trayectoria</span>
+      <h2 class="reveal d1">De lo <span class="grad">local</span> a lo <span class="grad">nacional</span></h2>
+      <p class="reveal d2">Más de 15 años al servicio de la salud pública colombiana.</p>
+    </div>
+    <div class="timeline" id="timeline">
+      <div class="fill" id="tlFill"></div>
+      <div class="item reveal"><span class="dot"></span><div class="when">2025 — Hoy</div><h3>Residente FETP · Nivel avanzado</h3><div class="org">Instituto Nacional de Salud</div><p>Equipos de Respuesta Inmediata en los territorios, salas de análisis de riesgo, evaluación de capacidades básicas y estudio a mediano plazo sobre las capacidades subnacionales.</p></div>
+      <div class="item reveal"><span class="dot"></span><div class="when">2025</div><h3>Apoyo técnico · Salas de Análisis del Riesgo</h3><div class="org">Organización Panamericana de la Salud (OPS/OMS) · con el INS</div><p>Implementación de las Salas de Análisis del Riesgo en las entidades territoriales, medición de capacidades básicas para brotes y emergencias, enlace de los ERI nacionales desplegados, simulacros, tableros de control y monitoreo de capacidades con el Centro de Operaciones de Emergencia.</p></div>
+      <div class="item reveal"><span class="dot"></span><div class="when">2024 — 2025</div><h3>Odontóloga especialista en Epidemiología · Salud ambiental</h3><div class="org">Subred Integrada de Servicios de Salud Centro Oriente E.S.E.</div><p>Plan de Intervenciones Colectivas: vigilancia de aire, ruido, radiación electromagnética y cambio climático, y gestión del proyecto Web Salud Ambiental de Bogotá.</p></div>
+      <div class="item reveal"><span class="dot"></span><div class="when">2022 — 2024</div><h3>Epidemióloga · Gestión del Riesgo y Respuesta Inmediata</h3><div class="org">Instituto Nacional de Salud</div><p>Medición de capacidades básicas de las entidades territoriales, SAR nacionales, tablero de la encuesta de capacidades, asistencias técnicas y apoyo a brotes, epidemias y emergencias en todo el país.</p></div>
+      <div class="item reveal"><span class="dot"></span><div class="when">2013 — 2024</div><h3>Profesional especializada en Epidemiología · Líder operativa</h3><div class="org">Hospital del Sur · Subred Integrada de Servicios de Salud Sur Occidente E.S.E.</div><p>Once años de vigilancia en salud pública: investigaciones epidemiológicas de campo, unidades de análisis, COVE, asistencia técnica a las UPGD y búsqueda activa institucional. Lideré el subsistema y el equipo operativo, y después la línea de vigilancia sanitaria y ambiental.</p></div>
+      <div class="item reveal"><span class="dot"></span><div class="when">2011 — 2013</div><h3>Epidemióloga</h3><div class="org">Hospital Engativá II Nivel E.S.E.</div><p>Vigilancia en salud pública local en Bogotá D.C.</p></div>
+      <div class="item reveal"><span class="dot"></span><div class="when">2011</div><h3>Odontóloga</h3><div class="org">Hospital San Francisco · Guachetá, Cundinamarca</div><p>Consulta externa y urgencias. Aquí empezó mi vocación por la salud de las comunidades.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FORMACIÓN ===================== -->
+<section id="formacion" class="light">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow reveal">Trayectoria académica</span>
+      <h2 class="reveal d1">Formación que respalda cada análisis</h2>
+    </div>
+    <div class="edu">
+      <div class="card-edu reveal"><div class="yr">2009</div><div class="lvl">Pregrado</div><h3>Odontología</h3><p>UNICOC, Bogotá. Inscrita en el ReTHUS desde 2011.</p></div>
+      <div class="card-edu reveal d1"><div class="yr">2012</div><div class="lvl">Especialización</div><h3>Especialización en Epidemiología</h3><p>Métodos epidemiológicos, bioestadística e investigación en salud.</p></div>
+      <div class="card-edu reveal d2"><div class="yr">2026</div><div class="lvl">Entrenamiento avanzado</div><h3>FETP · Epidemiología de Campo</h3><p>Programa de nivel avanzado del INS, en la red global TEPHINET de programas de epidemiología de campo.</p></div>
+    </div>
+    <div class="certs reveal d3">
+      <span><b>✓</b> Formación del Tutor · INS 2026</span>
+      <span><b>✓</b> Atención integral a víctimas · 2021</span>
+      <span><b>✓</b> Metodología 7-1-7 · OPS</span>
+      <span><b>✓</b> Herramientas digitales e IA aplicada a la salud</span>
+      <span><b>✓</b> Inglés</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOGROS ===================== -->
+<section id="logros">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow reveal">Logros y reconocimientos</span>
+      <h2 class="reveal d1">Resultados que <span class="grad">hablan</span></h2>
+    </div>
+    <div class="wins">
+      <article class="feature reveal">
+        <span class="pill">Investigación 2024–2026</span>
+        <h3>De los territorios a las fronteras: cómo han cambiado las capacidades subnacionales de vigilancia y respuesta</h3>
+        <p>Estudio longitudinal con 38 entidades territoriales (32 departamentos y 6 distritos). Resumen postulado a la convocatoria <strong style="color:var(--paper)">FETP International Night 2027</strong>.</p>
+        <div class="bars" id="bars">
+          <div class="bar-row"><span>Preparación</span><div class="track"><span data-w="100"></span></div><b>+13,0</b></div>
+          <div class="bar-row"><span>Identificación</span><div class="track"><span data-w="65"></span></div><b>+8,5</b></div>
+          <div class="bar-row"><span>Global</span><div class="track"><span data-w="61"></span></div><b>+7,9</b></div>
+        </div>
+        <div class="mini-stats">
+          <div><b>71%</b><small>territorios con trayectoria al alza</small></div>
+          <div><b>0,127→0,089</b><small>índice de Gini</small></div>
+          <div><b>65</b><small>variables verificadas</small></div>
+        </div>
+      </article>
+      <div class="win-list">
+        <a class="win reveal" href="https://doi.org/10.33610/23576189.2025.32" target="_blank" rel="noopener" style="text-decoration:none"><div class="medal">✎</div><div><h4>Coautora del Boletín Epidemiológico Semanal del INS</h4><p>Tema central de la semana 32 de 2025: “Evolución de la evaluación de desempeño de las entidades territoriales” (2018–2025), que incluye la evaluación de capacidades básicas en gestión del riesgo de 38 entidades territoriales. Ver publicación ↗</p></div></a>
+        <div class="win reveal d1"><div class="medal">★</div><div><h4>Docente del XXXIII Curso Internacional</h4><p>Métodos en Epidemiología de Campo y Vigilancia en Salud Pública, INS, noviembre de 2025. Dicté la conferencia “Taller de valoración y análisis del riesgo”.</p></div></div>
+        <div class="win reveal d2"><div class="medal">✓</div><div><h4>Tutora certificada por el INS</h4><p>Formación del Tutor, Grupo de Formación del Talento Humano para la Vigilancia en Salud Pública, 2026.</p></div></div>
+        <div class="win reveal d3"><div class="medal">◆</div><div><h4>Respuesta en emergencias nacionales</h4><p>ERI por fiebre amarilla en Tolima y sarampión en Santander, y apoyo a la respuesta al sismo de 2026.</p></div></div>
+        <div class="win reveal d4"><div class="medal">●</div><div><h4>Experiencia con la OPS/OMS</h4><p>Apoyo técnico en 2025 a la implementación nacional de las Salas de Análisis del Riesgo y a la medición de capacidades básicas para brotes y emergencias.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACTO ===================== -->
+<section id="contacto" class="contact">
+  <div class="wrap">
+    <span class="eyebrow reveal">Contacto</span>
+    <h2 class="reveal d1">¿Tienes un brote, una alerta o un territorio por <span class="grad">fortalecer</span>?</h2>
+    <p class="reveal d2">Hablemos de cómo llevar la epidemiología de campo a tu equipo.</p>
+    <div class="cta reveal d3">
+      <a class="btn primary" id="lnk-mail" href="#contacto">Escríbeme</a>
+      <a class="btn ghost" href="https://doi.org/10.33610/23576189.2025.32" target="_blank" rel="noopener">Ver mi publicación en el INS ↗</a>
+      <a class="btn ghost" id="lnk-linkedin" href="#" target="_blank" rel="noopener" hidden>LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Sandra Patricia Silva Duarte · Epidemióloga</span>
+    <span>Hecho con ciencia, datos y territorio · Paleta Silva-Duarte</span>
+  </div>
+</footer>
+
+<script>
+/* ====== CONFIGURA AQUÍ TUS ENLACES ====== */
+const CONTACTO = {
+  email: "sandrapsilvad@gmail.com",      // ← tu correo profesional; si lo dejas vacío, el botón "Escríbeme" no aparece
+  linkedin: ""    // ← opcional: si algún día creas tu LinkedIn, pega aquí la URL y aparecerá el botón
+};
+const mail = document.getElementById('lnk-mail'), lnk = document.getElementById('lnk-linkedin');
+if (CONTACTO.email) mail.href = "mailto:" + CONTACTO.email; else mail.hidden = true;
+if (CONTACTO.linkedin) { lnk.href = CONTACTO.linkedin; lnk.hidden = false; }
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ====== Texto que se escribe solo ====== */
+(() => {
+  const roles = ["Epidemióloga de campo", "Gestión del riesgo en salud pública", "Respuesta a brotes y epidemias", "Docente y tutora FETP", "Análisis de datos para decidir"];
+  const el = document.getElementById('typed');
+  if (reduce) { el.textContent = roles[0]; return; }
+  let r = 0, i = 0, del = false;
+  (function tick(){
+    const w = roles[r];
+    el.textContent = w.slice(0, i);
+    if (!del && i < w.length) i++;
+    else if (del && i > 0) i--;
+    else if (!del) { del = true; return setTimeout(tick, 1600); }
+    else { del = false; r = (r + 1) % roles.length; }
+    setTimeout(tick, del ? 35 : 70);
+  })();
+})();
+
+/* ====== Red animada de territorios (hero) ====== */
+(() => {
+  const c = document.getElementById('net'), ctx = c.getContext('2d');
+  let W, H, pts = [], mouse = {x:-999, y:-999};
+  const DPR = Math.min(devicePixelRatio || 1, 2);
+  function size(){
+    W = c.clientWidth; H = c.clientHeight;
+    c.width = W * DPR; c.height = H * DPR; ctx.setTransform(DPR,0,0,DPR,0,0);
+    const n = Math.min(110, Math.floor(W * H / 14000));
+    pts = Array.from({length:n}, () => ({
+      x: Math.random()*W, y: Math.random()*H,
+      vx: (Math.random()-.5)*.35, vy: (Math.random()-.5)*.35,
+      r: Math.random()*2+1, t: Math.random() < .5 ? '#E5A4D9' : '#00CED1',
+      p: Math.random()*Math.PI*2
+    }));
+  }
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    for (const a of pts){
+      a.x += a.vx; a.y += a.vy; a.p += .03;
+      if (a.x < 0 || a.x > W) a.vx *= -1;
+      if (a.y < 0 || a.y > H) a.vy *= -1;
+      const dx = a.x - mouse.x, dy = a.y - mouse.y, d = Math.hypot(dx, dy);
+      if (d < 140){ a.x += dx/d*.8; a.y += dy/d*.8; }
+    }
+    for (let i=0;i<pts.length;i++) for (let j=i+1;j<pts.length;j++){
+      const a=pts[i], b=pts[j], d=Math.hypot(a.x-b.x, a.y-b.y);
+      if (d < 130){
+        ctx.strokeStyle = `rgba(0,206,209,${(1-d/130)*.28})`;
+        ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
+      }
+    }
+    for (const a of pts){
+      ctx.fillStyle = a.t; ctx.globalAlpha = .55 + Math.sin(a.p)*.35;
+      ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, 7); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+    if (!reduce) requestAnimationFrame(draw);
+  }
+  addEventListener('resize', size);
+  c.parentElement.addEventListener('mousemove', e => { const r = c.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
+  c.parentElement.addEventListener('mouseleave', () => mouse.x = mouse.y = -999);
+  size(); draw();
+})();
+
+/* ====== Aparición al hacer scroll + contadores + barras ====== */
+(() => {
+  let pending = [...document.querySelectorAll('.reveal')];
+  function check(){
+    const lim = innerHeight * .92;
+    pending = pending.filter(el => {
+      if (el.getBoundingClientRect().top > lim) return true;
+      show(el); return false;
+    });
+  }
+  function show(el){
+      el.classList.add('in');
+      el.querySelectorAll('[data-w]').forEach(b => b.style.width = b.dataset.w + '%');
+      const n = el.querySelector('[data-count]');
+      if (n && !n.done){
+        n.done = true;
+        const end = +n.dataset.count, suf = n.dataset.suffix || '', t0 = performance.now(), dur = 1600;
+        (function step(t){
+          const p = Math.min(1, (t - t0) / dur), v = Math.round(end * (1 - Math.pow(1 - p, 3)));
+          n.textContent = v + suf; if (p < 1) setTimeout(() => step(performance.now()), 16);
+        })(t0);
+      }
+  }
+  addEventListener('scroll', check, {passive:true});
+  addEventListener('resize', check);
+  check();
+})();
+
+/* ====== Brillo que sigue al mouse en las skills ====== */
+document.querySelectorAll('.skill').forEach(s => s.addEventListener('mousemove', e => {
+  const r = s.getBoundingClientRect();
+  s.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+  s.style.setProperty('--my', (e.clientY - r.top) + 'px');
+}));
+
+/* ====== Nav, barra de progreso, línea de tiempo ====== */
+(() => {
+  const nav = document.getElementById('nav'), prog = document.getElementById('progress');
+  const tl = document.getElementById('timeline'), fill = document.getElementById('tlFill');
+  const items = tl.querySelectorAll('.item');
+  const secs = [...document.querySelectorAll('section[id]')], links = document.querySelectorAll('.links a');
+  function onScroll(){
+    const y = scrollY, h = document.documentElement.scrollHeight - innerHeight;
+    prog.style.width = (y / h * 100) + '%';
+    nav.classList.toggle('scrolled', y > 40);
+    const r = tl.getBoundingClientRect(), mid = innerHeight * .6;
+    const f = Math.max(0, Math.min(r.height, mid - r.top));
+    fill.style.height = f + 'px';
+    items.forEach(it => it.classList.toggle('lit', it.getBoundingClientRect().top < mid));
+    let cur = '';
+    secs.forEach(s => { if (s.getBoundingClientRect().top < innerHeight * .4) cur = s.id; });
+    links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+  }
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  const btn = document.getElementById('menuBtn'), ul = document.getElementById('links');
+  btn.addEventListener('click', () => ul.classList.toggle('open'));
+  links.forEach(a => a.addEventListener('click', () => ul.classList.remove('open')));
+})();
+</script>
+</body>
+</html>
